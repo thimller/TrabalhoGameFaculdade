@@ -12,17 +12,8 @@ class Game:
         self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
     def run(self):
-        # carrega a musica
-        pygame.mixer_music.load("./asset/Musicas/Menu.musica.mp3")
-        # faz a musica tocar
-        pygame.mixer_music.play(-1)
 
         while True:
             menu = Menu(self.window)
             menu.run()
             pass
-
-            #for event in pygame.event.get():
-             #   if event.type == pygame.QUIT:
-              #      pygame.QUIT()
-               #     quit()
