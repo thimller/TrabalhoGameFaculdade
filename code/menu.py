@@ -26,7 +26,8 @@ class Menu:
             # desenhando a imagem no retangulo
             self.window.blit(source=self.surf, dest=self.rect)
 
-            self.menu_text(50,"Castelo",(200,0,0),((WIN_WIDTH/2), 70))
+            self.menu_text(50,"Castle",(200,0,0),((WIN_WIDTH/2), 70))
+            self.menu_text(50,"Climb",(200,0,0),((WIN_WIDTH/2), 120))
             # mostrando a imagem na tela
             pygame.display.flip()
 
