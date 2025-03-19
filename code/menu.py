@@ -4,7 +4,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import WIN_WIDTH
+from code.const import WIN_WIDTH, COLOR_RED, MENU_OPTION
 
 
 class Menu:
@@ -26,8 +26,13 @@ class Menu:
             # desenhando a imagem no retangulo
             self.window.blit(source=self.surf, dest=self.rect)
 
-            self.menu_text(50,"Castle",(200,0,0),((WIN_WIDTH/2), 70))
-            self.menu_text(50,"Climb",(200,0,0),((WIN_WIDTH/2), 120))
+            self.menu_text(50,"Castle",COLOR_RED,((WIN_WIDTH/2), 70))
+            self.menu_text(50,"Climb",COLOR_RED,((WIN_WIDTH/2), 120))
+
+
+            for i in range(len(MENU_OPTION)):
+                self.menu_text(30,MENU_OPTION(i),COLOR_RED,((WIN_WIDTH/2), 200 + 25 * i))
+                
             # mostrando a imagem na tela
             pygame.display.flip()
 
