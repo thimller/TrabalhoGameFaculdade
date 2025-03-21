@@ -1,9 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from code.background import Background
+
 
 class EntityFactory:
-    def __init__(self):
-        pass
 
-    def get_entity(self, entity_type):
-        pass
+    @staticmethod
+    def get_entity(entity_name: str, position=(0,0)):
+        match entity_name:
+            case 'tile1':
+                list_tile = []
+                for i in range(180):
+                    list_tile.append(Background(f'tile1{i}', (0,0)))
+                return list_tile

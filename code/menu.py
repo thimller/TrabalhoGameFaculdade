@@ -6,7 +6,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 
-from code.const import WIN_WIDTH, COLOR_RED, MENU_OPTION, COLOR_WHITE
+from code.const import WIN_WIDTH, COLOR_RED, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
 
 
 class Menu:
@@ -71,9 +71,6 @@ class Menu:
         #self.window.blit(source=text_surf, dest=text_rect)
         #pygame.draw.rect(self.window, (255, 0, 0), text_rect, 1)
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
-
         text_surf: Surface = text_font.render(text,True,text_color).convert_alpha()
-
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
-
         self.window.blit(source=text_surf, dest=text_rect)
