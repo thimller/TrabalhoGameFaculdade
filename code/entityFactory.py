@@ -8,7 +8,7 @@ class EntityFactory:
     @staticmethod
     def get_entity(entity_name: str, position=(0,0)):
         match entity_name:
-            case 'tile1':
+            case 'tile':
                 list_tile = []
                 for i in range(180):
                     list_tile.append(Background(f'tile{i}', (0,0)))
