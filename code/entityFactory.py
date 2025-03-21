@@ -11,5 +11,5 @@ class EntityFactory:
             case 'tile1':
                 list_tile = []
                 for i in range(180):
-                    list_tile.append(Background(f'tile1{i}', (0,0)))
+                    list_tile.append(Background(f'tile{i}', (0,0)))
                 return list_tile
