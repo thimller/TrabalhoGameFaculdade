@@ -17,6 +17,7 @@ class Level:
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('tile'))
+        self.entity_list.append(EntityFactory.get_entity('Player'))
 
     def run(self, ):
         pygame.mixer_music.load("./asset/Musicas/Level.musica.mp3")

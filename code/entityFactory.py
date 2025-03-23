@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from code.background import Background
+from code.player import Player
 
 
 class EntityFactory:
@@ -8,6 +9,9 @@ class EntityFactory:
     @staticmethod
     def get_entity(entity_name: str):
         match entity_name:
+            case'Player':
+                return Player('Player', (42, 363))
+
             case 'tile':
                 list_tile = []
                 for i in range(180):
@@ -243,7 +247,9 @@ class EntityFactory:
                     list_tile.append(Background('tile120', (735,315)))
                     list_tile.append(Background('tile83', (735,360)))
 
-
-
-
                 return list_tile
+
+
+
+
+
